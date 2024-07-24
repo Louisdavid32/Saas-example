@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}home{% endblock title %}
+
+
+{% block content %}
+<p> {{request.user}} {{ request.method}} -- {{ request.user.is_authenticated}}</p>
+ Page visit :{{page_visit_count}}
+ total visit : {{tota_visite_count}}
+
+ Percent: {{percent}}%
+{% include "snippets/welcome_user.html" %}
+  
+{% endblock content %}
